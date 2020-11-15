@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+	<link rel="stylesheet" href="css/style2.css">
+	<input type="checkbox"  id="hmt" class="hidden-menu-ticker">
+	<label for="hmt" class="btn-menu">
+	<span class="first"></span>
+	<span class="second"></span>
+	<span class="third"></span>
+	</label>
+	
+	<ul class="hidden-menu">
+		<li><img class="icon" src="img/search.png" alt=""><a href="search.html">Главная</a></li>
+	<li><img class="icon" src="img/pie-chart.png" alt=""><a href="1.html">Анализ</a></li>
+		
+		<li><img class="icon" src="img/24-hours-support.png" alt=""><a href="pod.html">Помощь</a></li>
+	</ul>
+	<div class="new1">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Год', 'Прибыль', 'Затраты'],
+          ['2013',  1000,      400],
+          ['2014',  1170,      460],
+          ['2015',  660,       1120],
+          ['2016',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+		<div id="chart_div" style="width: 700px; height: 325px; margin: 10px 720px; "></div>
+		
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+	  google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Города', 'Дата'],
+          ['Россия',     11],
+          ['Индия',      2],
+          ['США',  2],
+          ['Германия', 2],
+          ['Китай',    7]
+        ]);
+        var options = {
+          title: 'Наши сотрудники по всему миру!',
+          is3D: true,
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+	<div id="piechart_3d" style="width: 700px; height: 325px; margin-top: -335px"></div>
+		</div>
+	
+	<div class="new2">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'x');
+        data.addColumn('number', 'values');
+        data.addColumn({id:'i0', type:'number', role:'interval'});
+        data.addColumn({id:'i1', type:'number', role:'interval'});
+        data.addColumn({id:'i2', type:'number', role:'interval'});
+        data.addColumn({id:'i2', type:'number', role:'interval'});
+        data.addColumn({id:'i2', type:'number', role:'interval'});
+        data.addColumn({id:'i2', type:'number', role:'interval'});
+  
+        data.addRows([
+            [1, 100, 90, 110, 85, 96, 104, 120],
+            [2, 120, 95, 130, 90, 113, 124, 140],
+            [3, 130, 105, 140, 100, 117, 133, 139],
+            [4, 90, 85, 95, 85, 88, 92, 95],
+            [5, 70, 74, 63, 67, 69, 70, 72],
+            [6, 30, 39, 22, 21, 28, 34, 40],
+            [7, 80, 77, 83, 70, 77, 85, 90],
+            [8, 100, 90, 110, 85, 95, 102, 110]]);
+  
+        // The intervals data as narrow lines (useful for showing raw source data)
+        var options_lines = {
+            title: 'Развитие',
+            curveType: 'Функция',
+            lineWidth: 4,
+            intervals: { 'style':'line' },
+            legend: 'none'
+        };
+  
+        var chart_lines = new google.visualization.LineChart(document.getElementById('chart_lines'));
+        chart_lines.draw(data, options_lines);
+      }
+    </script>
+	<div id="chart_lines" style="width: 700px; height: 325px; margin-top: 10px;"></div>
+		
+		
+		<script type="text/javascript">
+		
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Понедельник', 20, 28, 38, 45],
+      ['Вторник', 31, 38, 55, 66],
+      ['Среда', 50, 55, 77, 80],
+      ['Четверг', 77, 77, 66, 50],
+      ['Пятница', 68, 66, 22, 15]
+      
+    ], true);
+
+    var options = {
+      legend:'none'
+    };
+
+    var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
+
+    chart.draw(data, options);
+  }
+    </script>
+		
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawSeriesChart);
+
+    function drawSeriesChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Город', 'Кординаты', 'Скорость стройки', 'Регион',     'Население'],
+        ['Курская АЭС-2',    80.66,              1.67,      'Россия',  33739900],
+        ['Ленинградская АЭС-2',    79.84,              1.36,      'Россия',         81902307],
+        ['АЭС «Аккую»',    78.6,               1.84,      'Турция',         5523095],
+        ['Белорусская АЭС',    72.73,              2.78,      'Беларусь',    79716203],
+        ['АЭС «Куданкулам»',    80.05,              2,         'Индия',         61801570],
+        ['АЭС "Пакш-2"',    72.49,              1.7,       'Венгрия',    73137148],
+        ['АЭС «Руппур»',    68.09,              4.77,      'Бангладеш',    31090763],
+        ['АЭС «Сюдайпу»',    81.55,              2.96,      'Китай',    7485600],
+        ['АЭС «Тяньвань»',    68.6,               1.54,      'Китай',         141850000],
+        ['АЭС «Ханхикиви-1»',    78.09,              2.05,      'Финляндия',  307007000]
+      ]);
+
+      var options = {
+        title: 'Строительство АЭС на 2020 год',
+        hAxis: {title: '% развития этапа'},
+        vAxis: {title: 'Этап строительства'},
+        bubble: {textStyle: {fontSize: 11}}
+      };
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+ 
+    <div id="series_chart_div" style="width: 700px; height: 325px; margin: -325px 718px;"></div>	
+
+
+</div>
+	
+	
+	
+</head>
+<body>
+	
+	<div class="countainer">
+	
+	
+	
+	</div>
+</body>
+</html>

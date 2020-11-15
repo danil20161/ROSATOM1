@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="js/31.js">
+<title>Документ без названия</title>
+</head>
+<body>
+	<input type="checkbox"  id="hmt" class="hidden-menu-ticker">
+	<label for="hmt" class="btn-menu">
+	<span class="first"></span>
+	<span class="second"></span>
+	<span class="third"></span>
+	</label>
+	
+	<ul class="hidden-menu">
+		<li><img class="icon" src="img/search.png" alt=""><a href="search.html">Главная</a></li>
+	<li><img class="icon" src="img/pie-chart.png" alt=""><a href="1.html">Анализ</a></li>
+		
+		<li><img class="icon" src="img/24-hours-support.png" alt=""><a href="pod.html">Помощь</a></li>
+	</ul>
+<header class="head">
+ <div class="container">
+  <div class="head__iner">
+	<div class="head__logo">
+		
+	  </div> 
+	 
+	  
+	 </div>	
+	</div>
+	</header>	
+	
+	
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Основные показатели деятельности', 'Покахатели'],
+          ['Интегральный инновационый показатель', 13], ['Консолидированое производительность труда', 83], ['Портфель зарубежных заказов на 10 вперед', 1.4],
+          ['Выручка по новым подуктам', 2.3], ['Удельная условно-постоянные затраты', 46], ['Выроботка энергии', 300],
+          ['Количество событий уровня "2" и выше по шкале INES', 38], ['Портфель заказов по новым продуктам на 10 лет вперед', 5.5], ['Исполнение инвестиционной программы', 5],
+          ['Скорректированный свободный денежный поток Госкорпорации', 33]
+        ]);
+
+        var options = {
+          title: 'Ключевые показатели деятельности (по итогам 2019 года)',
+          legend: 'none',
+          pieSliceText: 'label',
+          slices: {  4: {offset: 0.2},
+                    12: {offset: 0.3},
+                    14: {offset: 0.4},
+                    15: {offset: 0.5},
+          },
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+	  <div id="piechart" style="width: 725px; height: 500px; margin: 40 90px;"></div>
+	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Language', 'Speakers (in millions)'],
+          ['Финансовый',  5.85],
+          ['Производственный',  1.66],
+          ['Интеллектуальный', 0.316],
+          ['Человеческий', 0.0791]
+        ]);
+
+      var options = {
+        legend: 'none',
+        pieSliceText: 'label',
+        title: 'Диаграмма стоимости',
+        pieStartAngle: 100,
+      };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart__3'));
+        chart.draw(data, options);
+      }
+    </script>
+  
+    <div id="piechart__3" style="width: 925px; height: 500px; margin: -500px 790px;"></div>
+	
+	
+
+	
+</body>
+</html>
